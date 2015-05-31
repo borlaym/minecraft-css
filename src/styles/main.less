@@ -1,0 +1,44 @@
+
+.perspective {
+
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	perspective: 1000px;
+	background: #d1ecf7;
+
+  .block {
+    	transform-style: preserve-3d;
+    	position: absolute;
+        top: 400px;
+        left: 300px;
+
+    	div {
+    		width: 382px;
+    		height: 382px;
+    		position: absolute;
+    	}
+
+    	.top {
+    		background: url(../images/grass_top.png);
+    	}
+
+    	.left, .right, .front, .back {
+    		background: url(../images/grass_side.png);
+    	}
+
+    	.bottom {
+    		background: url(../images/grass_bottom.png);
+    	}
+
+    	.front  { transform: rotateY(   0deg ) translateZ( 191px ); }
+		.back   { transform: rotateX( 180deg ) translateZ( 191px ); }
+		.right  { transform: rotateY(  90deg ) translateZ( 191px ); }
+		.left   { transform: rotateY( -90deg ) translateZ( 191px ); }
+		.top    { transform: rotateX(  90deg ) translateZ( 191px ); }
+		.bottom { transform: rotateX( -90deg ) translateZ( 191px ); }
+  
+    }
+}
