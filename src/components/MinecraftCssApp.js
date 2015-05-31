@@ -24,11 +24,11 @@ var colSize = 10;
 
 $(document).ready(function() {
 
-	for (var i = 30; i >= 0; i--) {
+	for (var i = 100; i >= 0; i--) {
 
 		var block = $(blockHTML);
-		var x = Math.floor(Math.random() * 3) * 382;
-		var y = Math.floor(Math.random() * 3) * 382;
+		var x = (Math.floor(Math.random() * 10) - 5) * 382;
+		var y = (Math.floor(Math.random() * 4)) * 382;
 		var z = -(3 + Math.floor(i / 10)) * 382;
 		block.css({
 			"transform": "translate3d(" + x + "px, " + y + "px, " + z + "px)"
@@ -54,11 +54,16 @@ $(document).ready(function() {
 		}
 	});
 
+
+	setInterval(function() {
+
+	}, 1000/60);
+
 });
 
 
 function updateCamera() {
-	$(".perspective").css({
+	$(".scene").css({
 		"transform": "translate3d(" + (-camera[0] * 2) + "px, " + (-camera[1] * 2) + "px, " + 0 + "px)"
 	});
 }
